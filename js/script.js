@@ -1,4 +1,8 @@
-// Menu mobile
+// Menu mobile 
+function toggleMenu(){
+  const nav =  document.querySelector('nav');
+  nav.classList.toggle('mobile');
+}
 
 // Imagem 1
 const imagem1 = document.getElementById("lampada-01");
@@ -11,4 +15,19 @@ imagem1.addEventListener("click", function () {
   }
 });
 
+
 // Imagem 2
+const imagem2 = document.getElementById('lampada-02');
+imagem2.addEventListener('mouseover', function () {
+  if (imagem2.src.endsWith('lampada.jpg')) {
+    imagem2.src = 'img/lampada-on.jpg';
+  } else {
+    imagem2.src = 'img/lampada.jpg';
+  }
+});
+
+imagem2.addEventListener('mouseout', function () {
+  if (imagem2.src.endsWith('lampada-on.jpg')) {
+    imagem2.src = 'img/lampada.jpg';
+  }
+});
